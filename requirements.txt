@@ -1,0 +1,11 @@
+# Verified execution environment for supplementary scripts
+numpy>=1.26.0
+pandas>=2.1.0
+scipy>=1.11.0
+scikit-learn>=1.4.0
+
+# Tested reference environment:
+# numpy==2.5.4
+# pandas==3.1.0
+# scipy==1.18.1
+# scikit-learn==1.9.1

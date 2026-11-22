@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, dataset, or leak-free validation scripts, please cite this work as below."
+title: "Bearing Fault Severity Classification Using FastICA-CSD Separation and Random Forest: FAIR Supplementary Material and Reproducibility Repository"
+type: software
+authors:
+  - family-names: Agustian
+    given-names: Indra
+    affiliation: "Department of Electrical Engineering, Faculty of Engineering, University of Bengkulu, Indonesia"
+  - family-names: Suhari
+    given-names: Ahmad Riznandi
+    affiliation: "Department of Electrical Engineering, Faculty of Engineering, University of Bengkulu, Indonesia"
+  - family-names: Suryadi
+    given-names: Dedi
+    email: "dedi_suryadi@unib.ac.id"
+    affiliation: "Department of Mechanical Engineering, Faculty of Engineering, University of Bengkulu, Indonesia"
+  - family-names: Faurina
+    given-names: Ruvita
+    affiliation: "Department of Informatics, Faculty of Engineering, University of Bengkulu, Indonesia"
+keywords:
+  - bearing fault severity classification
+  - blind source separation
+  - FastICA
+  - cross spectral density
+  - random forest
+  - leak-free cross-validation
+license: MIT

@@ -1,0 +1,11 @@
+scenario,model,acc_mean,acc_std,macro_precision,macro_recall,macro_f1,macro_roc_auc
+Without FastICA,Random Forest (Paper),50.23,4.15,,,,
+Without FastICA,Random Forest (Tuned),55.97,5.3,,,,
+With FastICA,Random Forest (Paper),61.53,3.25,0.668,0.615,0.619,0.879
+With FastICA,Random Forest (Tuned),64.61,1.47,0.665,0.646,0.646,0.905
+With FastICA,SVM (RBF),67.16,2.84,0.681,0.672,0.67,0.91
+With FastICA,Gradient Boosting,63.93,2.42,0.652,0.639,0.638,0.895
+With FastICA,Logistic Regression,48.55,3.4,0.488,0.486,0.476,0.781
+With FastICA,KNN (k=5),61.86,2.24,0.624,0.619,0.616,0.836
+With FastICA,MLP (ANN),64.85,1.21,0.655,0.649,0.647,0.901
+With FastICA,Decision Tree,54.51,2.27,0.542,0.545,0.541,0.716

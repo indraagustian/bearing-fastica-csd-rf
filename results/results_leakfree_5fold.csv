@@ -1,0 +1,9 @@
+model,acc_mean,acc_std,macro_precision,macro_recall,macro_f1,macro_roc_auc
+Random Forest (Paper),80.0,3.06,0.816,0.8,0.797,0.955
+Random Forest (Tuned),80.27,3.67,0.818,0.803,0.8,0.957
+SVM (RBF),79.45,5.21,0.804,0.795,0.793,0.96
+Gradient Boosting,80.33,4.7,0.816,0.803,0.804,0.949
+Logistic Regression,81.42,4.53,0.822,0.814,0.813,0.964
+KNN (k=5),75.0,5.11,0.766,0.75,0.751,0.902
+MLP (ANN),78.03,5.23,0.79,0.78,0.78,0.942
+Decision Tree,73.0,5.22,0.743,0.73,0.729,0.831
