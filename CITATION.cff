@@ -16,6 +16,9 @@ authors:
   - family-names: Faurina
     given-names: Ruvita
     affiliation: "Department of Informatics, Faculty of Engineering, University of Bengkulu, Indonesia"
+  - family-names: Daratha
+    given-names: Novalio
+    affiliation: "Department of Electrical Engineering, Faculty of Engineering, University of Bengkulu, Indonesia"
 keywords:
   - bearing fault severity classification
   - blind source separation

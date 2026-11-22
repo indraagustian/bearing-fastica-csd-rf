@@ -92,11 +92,11 @@ python scripts/03_split_first_raw_ablation.py
 
 If you use this repository, dataset, or leak-free validation scripts prior to formal journal publication, please cite the repository provisionally as:
 
-> I. Agustian, A. R. Suhari, D. Suryadi, and R. Faurina, "Bearing Fault Severity Classification Using FastICA-CSD Separation and Random Forest (Supplementary Code and Data Repository)," GitHub, 2026. Available: https://github.com/indraagustian/bearing-fastica-csd-rf (Manuscript submitted for peer review).
+> I. Agustian, A. R. Suhari, D. Suryadi, R. Faurina, and N. Daratha, "Bearing Fault Severity Classification Using FastICA-CSD Separation and Random Forest (Supplementary Code and Data Repository)," GitHub, 2026. Available: https://github.com/indraagustian/bearing-fastica-csd-rf (Manuscript submitted for peer review).
 
 ```bibtex
 @misc{agustian2026bearing,
-  author       = {Agustian, Indra and Suhari, Ahmad Riznandi and Suryadi, Dedi and Faurina, Ruvita},
+  author       = {Agustian, Indra and Suhari, Ahmad Riznandi and Suryadi, Dedi and Faurina, Ruvita and Daratha, Novalio},
   title        = {Bearing Fault Severity Classification Using {FastICA-CSD} Separation and {Random Forest}: Supplementary Code and Data Repository},
   year         = {2026},
   howpublished = {\url{https://github.com/indraagustian/bearing-fastica-csd-rf}},
