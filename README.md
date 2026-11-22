@@ -3,7 +3,7 @@
 Standalone FAIR supplementary material and reproducibility repository for the manuscript **"Bearing Fault Severity Classification Using FastICA-CSD Separation and Random Forest"**.
 
 > **Note for Peer Review (Double-Blind Safety):**  
-> Core scripts (`scripts/`), datasets (`data/`), documentation (`docs/`), and benchmark outputs (`results/`) are kept author-neutral. If uploading this repository as anonymous supplementary material for a double-blind journal submission, remove `CITATION.cff` and update the copyright header in `LICENSE` before archiving.
+> Core scripts (`scripts/`), datasets (`data/`), technical documentation (`docs/`), and benchmark outputs (`results/`) are kept author-neutral. If uploading this repository as anonymous supplementary material for a double-blind journal submission, remove `CITATION.cff`, remove Section 5 (`Citation`) below, and update the copyright header in `LICENSE` before archiving.
 
 ---
 
@@ -85,3 +85,22 @@ python scripts/03_split_first_raw_ablation.py
 - **Multiplexing & Streaming:** TCA9548A I2C multiplexer (`0x70`, channels `0, 2, 4, 7`) polled sequentially by an Arduino Mega 2560 under a $>1\text{ ms}$ timer gate, streamed via USB Type-B at `115,200 bps`.
 - **Operating Speeds:** 242 rpm (`posisi_1`), 490 rpm (`posisi_2`), and 662 rpm (`posisi_3`).
 - **Fault Classes:** 5 severity levels representing 0, 1, 2, 3, and 4 rolling balls removed out of 7 (`0%`, `14.3%`, `28.6%`, `42.9%`, `57.1%` rolling-element loss).
+
+---
+
+## 5. Citation (Provisional)
+
+If you use this repository, dataset, or leak-free validation scripts prior to formal journal publication, please cite the repository provisionally as:
+
+> I. Agustian, A. R. Suhari, D. Suryadi, and R. Faurina, "Bearing Fault Severity Classification Using FastICA-CSD Separation and Random Forest (Supplementary Code and Data Repository)," GitHub, 2026. Available: https://github.com/indraagustian/bearing-fastica-csd-rf (Manuscript submitted for peer review).
+
+```bibtex
+@misc{agustian2026bearing,
+  author       = {Agustian, Indra and Suhari, Ahmad Riznandi and Suryadi, Dedi and Faurina, Ruvita},
+  title        = {Bearing Fault Severity Classification Using {FastICA-CSD} Separation and {Random Forest}: Supplementary Code and Data Repository},
+  year         = {2026},
+  howpublished = {\url{https://github.com/indraagustian/bearing-fastica-csd-rf}},
+  note         = {Provisional repository citation; manuscript submitted for peer review}
+}
+```
+

@@ -23,4 +23,7 @@ keywords:
   - cross spectral density
   - random forest
   - leak-free cross-validation
+repository-code: "https://github.com/indraagustian/bearing-fastica-csd-rf"
+url: "https://github.com/indraagustian/bearing-fastica-csd-rf"
+date-released: 2026-11-22
 license: MIT
