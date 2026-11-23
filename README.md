@@ -17,24 +17,24 @@ supplementary_fair_repo/
 ├── requirements.txt                           # Python dependencies
 ├── docs/
 │   ├── DATA_DICTIONARY.md                     # 5-class severity dictionary, sensor wiring, 12-feature specs
-│   └── SUPPLEMENTARY_NOTES.md                 # Complete leak-free benchmark tables & field-test notes
+│   └── SUPPLEMENTARY_NOTES.md                 # Complete block-CV benchmark tables & supplementary raw notes
 ├── data/
 │   ├── processed/
 │   │   ├── 3result25-500-5_nfica_stat.csv     # Primary 3,300 x 13 feature dataset (W=500, step=25)
-│   │   └── datates_mentah_500_5_fica_stat.csv # Unified 10,500 x 13 field-test features
+│   │   └── datates_mentah_500_5_fica_stat.csv # Supplementary unified 10,500 x 13 field-test features
 │   └── raw_fieldtest/
 │       └── *.csv                              # 15 raw 4-channel MPU6050 streams (18,000 rows each)
 ├── scripts/
 │   ├── common.py                              # Shared FastICA-CSD, Welch PSD, and classifier utilities
-│   ├── 01_leakfree_5fold_benchmark.py         # Reproduces 5-fold leak-free block CV (Paper Table IV)
-│   ├── 02_unified_fieldtest_cv.py             # Reproduces unified 10,500-window field-test benchmark
-│   ├── 03_split_first_raw_ablation.py         # Reproduces split-first FastICA ablation on raw streams
+│   ├── 01_leakfree_5fold_benchmark.py         # Reproduces 5-fold block CV (Paper Table V)
+│   ├── 02_unified_fieldtest_cv.py             # Supplementary unified 10,500-window field-test benchmark
+│   ├── 03_split_first_raw_ablation.py         # Supplementary split-first FastICA ablation on raw streams
 │   ├── 04_verify_dataset_and_rf.py            # Verifies dataset geometry (300/500/700) & Gini importances
 │   └── run_all.py                             # Executes scripts 04 -> 01 -> 02 -> 03 sequentially
 └── results/
-    ├── results_leakfree_5fold.csv             # Out-of-fold benchmark across 8 classifier configs
-    ├── results_unified_mentah_leakfree.csv    # Unified field-test benchmark (10,500 windows)
-    └── results_split_first_raw.csv            # Split-first FastICA ablation + 8-model benchmark
+    ├── results_leakfree_5fold.csv             # Out-of-fold 5-fold block CV benchmark (Paper Table V)
+    ├── results_unified_mentah_leakfree.csv    # Supplementary unified field-test benchmark (10,500 windows)
+    └── results_split_first_raw.csv            # Supplementary split-first FastICA ablation + 8-model benchmark
 ```
 
 Total repository footprint is ~24.1 MB (all individual files under 2 MB; no Git LFS required).
@@ -70,10 +70,10 @@ python scripts/03_split_first_raw_ablation.py
 
 | Script | Paper Reference | Verified Key Output |
 | :--- | :--- | :--- |
-| `04_verify_dataset_and_rf.py` | Section II-G, II-H, Table II, Fig. 13 | Verifies `3,420` / `3,300` / `3,180` window counts, 15 raw CSVs, and top-4 Gini features (`68.3%` native refit; `68.5%` original Colab binary) |
-| `01_leakfree_5fold_benchmark.py` | Section II-E, II-H, III-D, Table IV | Reproduces 8-classifier 5-fold leak-free CV (`GAP = 20`): Regularized RF `80.00% ± 3.06%`, Nested-CV RF `80.27% ± 3.67%` |
-| `02_unified_fieldtest_cv.py` | Section II-H, III-D (`datates/mentah`) | Reproduces 10,500-window unified leak-free CV: Nested-CV RF macro ROC-AUC `0.889` (`63.31% ± 3.01%`), Regularized RF `60.78% ± 3.11%` |
-| `03_split_first_raw_ablation.py` | Section II-H, III-D (`datates/mentah`) | Reproduces split-first per-fold preprocessing FastICA gain (`50.23% → 61.53%` Regularized RF; `55.97% → 64.61%` Nested-CV RF) |
+| `04_verify_dataset_and_rf.py` | Section II-G, II-H, Table II, Table III, Fig. 13 | Verifies `3,420` / `3,300` / `3,180` feature instances, 15 raw CSVs, and top-4 Gini features (`68.3%` native refit; `68.5%` original Colab binary) |
+| `01_leakfree_5fold_benchmark.py` | Section II-E, II-I, III-D, Table V | Reproduces 8-classifier 5-fold block CV (`GAP = 20`): Regularized RF `80.00% ± 3.06%`, Nested-CV RF `80.27% ± 3.67%` |
+| `02_unified_fieldtest_cv.py` | Supplementary (`docs/SUPPLEMENTARY_NOTES.md`) | Extended 10,500-window unified 5-fold block CV on raw field streams: Nested-CV RF macro ROC-AUC `0.889` (`63.31% ± 3.01%`), Regularized RF `60.78% ± 3.11%` |
+| `03_split_first_raw_ablation.py` | Supplementary (`docs/SUPPLEMENTARY_NOTES.md`) | Extended split-first per-fold preprocessing FastICA ablation on raw field streams (`50.23% → 61.53%` Regularized RF; `55.97% → 64.61%` Nested-CV RF) |
 
 *(CSV naming convention note: within output CSVs, `Random Forest (Paper)` corresponds to **Random Forest (Regularized)** and `Random Forest (Tuned)` corresponds to **Random Forest (Nested-CV)** in the manuscript.)*
 
@@ -90,7 +90,7 @@ python scripts/03_split_first_raw_ablation.py
 
 ## 5. Citation (Provisional)
 
-If you use this repository, dataset, or leak-free validation scripts prior to formal journal publication, please cite the repository provisionally as:
+If you use this repository, dataset, or validation scripts prior to formal journal publication, please cite the repository provisionally as:
 
 > I. Agustian, A. R. Suhari, D. Suryadi, R. Faurina, and N. Daratha, "Bearing Fault Severity Classification Using FastICA-CSD Separation and Random Forest (Supplementary Code and Data Repository)," GitHub, 2026. Available: https://github.com/indraagustian/bearing-fastica-csd-rf (Manuscript submitted for peer review).
 

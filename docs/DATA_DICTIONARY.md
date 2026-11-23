@@ -12,7 +12,7 @@ This document describes all datasets bundled under `data/` for reproducible veri
 | `3` | Fault Level 3 | 3 of 7 | 42.9% | `Bearing_3_Bola_Lepas_posisi_*.csv` -> `Sensor 3` |
 | `4` | Fault Level 4 | 4 of 7 | 57.1% | `Bearing_4_Bola_Lepas_posisi_*.csv` -> `Sensor 3` |
 
-*Dry-lubrication follow-up recordings:* `Tanpa_Pelumas_posisi_{1,2,3}.csv` (3 files, 18,000 samples each) are provided for exploratory diagnostics of lubricant-drying effects observed during unseen field evaluation.
+*Dry-lubrication follow-up recordings:* `Tanpa_Pelumas_posisi_{1,2,3}.csv` (3 files, 18,000 samples each) are provided for exploratory follow-up diagnostics of dry-lubrication bearing behavior.
 
 ## 2. Speed Positions
 

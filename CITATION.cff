@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, dataset, or leak-free validation scripts, please cite this work as below."
+message: "If you use this software, dataset, or block cross-validation scripts, please cite this work as below."
 title: "Bearing Fault Severity Classification Using FastICA-CSD Separation and Random Forest: FAIR Supplementary Material and Reproducibility Repository"
 type: software
 authors:
@@ -25,7 +25,7 @@ keywords:
   - FastICA
   - cross spectral density
   - random forest
-  - leak-free cross-validation
+  - block cross-validation
 repository-code: "https://github.com/indraagustian/bearing-fastica-csd-rf"
 url: "https://github.com/indraagustian/bearing-fastica-csd-rf"
 date-released: 2026-11-22
